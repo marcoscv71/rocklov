@@ -1,0 +1,35 @@
+---
+- title: senha incorreta
+  payload:
+    email: adam2@bol.com.br
+    password: pwd123
+  code: 401
+  error: Unauthorized
+- title: usuario nao existe
+  payload:
+    email: 404@bol.com.br
+    password: pwd123
+  code: 401
+  error: Unauthorized
+- title: email em branco
+  payload:
+    email: ''
+    password: pwd123
+  code: 412
+  error: required email
+- title: sem o campo email
+  payload:
+    password: '123456'
+  code: 412
+  error: required email
+- title: senha em branco
+  payload:
+    email: adam2@bol.com.br
+    password: ''
+  code: 412
+  error: required password
+- title: sem o campo senha
+  payload:
+    email: adam2@bol.com.br
+  code: 412
+  error: required password
